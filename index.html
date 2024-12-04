@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LanoVa Living</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1 {
+    font-family: 'Abril Fatface', cursive;
+    color:bisque;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+}
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    color: #32cdd5;
+    justify-content: center;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; 
+}
+
+.search-btn {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+}
+
+.search-btn:hover {
+    background-color: #555;
+}
+
+</style>
+<body>
+    <header>
+        
+        <h1>LanoVa Living</h1>
+    
+        
+
+        <nav id="nav-list" class="nav-list">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="cart.html">Keranjang</a></li>
+            </ul> 
+
+            <form action="search-result.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Cari produk..." class="search-input">
+                <button type="submit" class="search-btn">Cari</button>
+            </form>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Temukan Furniture Impian Anda</h2>
+            <p>Berbagai pilihan furniture berkualitas untuk rumah Anda.</p>
+            <a href="products.html" class="btn">Lihat Produk</a>
+        </section>
+
+        <section class="featured-products">
+            <h2>Produk Unggulan</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="mejamakan1.jpg" alt="Produk 1">
+                    <h3>Meja Makan</h3>
+                    <p>Rp 12.000.000</p>
+                    <a href="product-detail.html" class="btn">Detail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="nella.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pencarian</title>
+</head>
+<style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    #product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        gap: 20px; 
+    }
+
+    .product-item {
+        border: 1px solid #e0e0e0;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .product-item img {
+        max-width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .product-item h3 {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .product-item p {
+        font-size: 14px;
+        color: #777;
+    }
+
+    footer {
+        background-color: #f8f8f8;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Hasil Pencarian</h1>
+    </header>
+
+    <main>
+        <section id="search-results">
+            <h2>Menampilkan hasil untuk: <span id="search-query"></span></h2>
+            <div id="product-list"></div>
+        </section>
+    </main>
+
+<script>
+
+const products = [
+    { name: 'Sofa Modern', price: 'Rp 6.500.000', image: 'sofa.jpg' },
+    { name: 'Modern Gray Sofa', price: 'Rp 8.800.000', image: 'moderngray.jpeg' },
+    { name: 'Giant Sofa', price: 'Rp 7.350.000', image: 'giantsofa.jpeg' },
+    { name: 'Tulip Sofa', price: 'Rp 9.300.000', image: 'tulipsofa.jpeg' },
+    { name: 'Rumsey Linen Sofa', price: 'Rp 10.200.000', image: 'sofa1.jpg' },
+    { name: 'Vois Modulaar Sofa', price: 'Rp 10.300.000', image: 'VOIS.jpg' },
+    { name: 'Matera Sofa', price: 'Rp 12.300.000', image: 'sofa3.jpg' },
+    { name: 'Sofa Retro', price: 'Rp 8.700.000', image: 'sofa4.jpg' },
+    { name: 'Woodmist Sofa', price: 'Rp 9.600.000', image: 'sofa5.jpg' },
+    { name: 'Minimalist Relaxing Lounge Sofa', price: 'Rp 15.900.000', image: 'sofa9.jpg' },
+    { name: 'Tofu L-Shape Sofa', price: 'Rp 16.700.000', image: 'sofa0.jpg' },
+    { name: 'Arianna Corner Sofa', price: 'Rp 17.300.000', image: 'sofa01.jpg' },
+    { name: 'Robin Liu Marshmallow Sofa', price: 'Rp 11.400.000', image: 'sofa12.jpg' },
+    { name: 'Linteloo Arp Sofa', price: 'Rp 11.000.000', image: 'sofa98.jpg' },
+    { name: 'Pastel Sofa', price: 'Rp 13.100.000', image: 'sofa45jpg.jpg' },
+    { name: 'Cloud Sofa', price: 'Rp 7.700.000', image: 'Cloud Sofa.jpeg' },
+    { name: 'Dipley Beige Sofa', price: 'Rp 6.900.000', image: 'sofa4.jpg' },
+    { name: 'Fabric Armrest Sofa', price: 'Rp 7.800.000', image: 'sofa2.jpg' },
+    { name: 'French Modern Sofa', price: 'Rp 9.300.000', image: 'french.jpeg' },
+    { name: 'Comfort Flower Sofa', price: 'Rp 6.600.000', image: 'flowersofa.jpg' },
+
+    { name: 'Meja Makan Kayu', price: 'Rp 2.800.000', image: 'mejamakan1.jpg' },
+    { name: 'Dining Room Scandinavian', price: 'Rp 10.800.000', image: 'SCANDAVIAN.jpg', alt:'Meja Makan' },
+    { name: 'Modern Japanase Dining Table', price: 'Rp 10.900.000', image: 'japan.jpg', alt:'Meja Makan' },
+    { name: 'Orbis Dining Set', price: 'Rp 11.000.000', image: 'orbis.jpg', alt:'Meja Makan' },
+    { name: 'Katrina Dining Set', price: 'Rp 11.000.000', image: 'katarina.jpg', alt:'Meja Makan' },
+    { name: 'Glamorous Dining Table', price: 'Rp 8.000.000', image: 'glamorous.jpg', alt:'Meja Makan' },
+    { name: 'Elegance Dining Table', price: 'Rp 7.500.000', image: 'elegance.jpg', alt:'Meja Makan' },
+    { name: 'Dining Table Marble Set', price: 'Rp 15.500.000', image: 'marble.jpg' , alt:'Meja Makan'},
+    { name: 'Sophisticated Dining Table', price: 'Rp 20.500.000', image: 'sphi.jpg', alt:'Meja Makan' },
+    { name: 'Marmer Dining Table', price: 'Rp 25.800.000', image: 'marmer.jpg', alt:'Meja Makan' },
+
+    { name: 'Kursi Santai', price: 'Rp 300.000', image: 'kursisantai.jpg', alt:'Kursi Santai' },
+    { name: 'Lily Rattan Peacock Chair', price: 'Rp 370.000', image: 'Lily Rattan Peacock Chair.jpeg', alt:'Kursi Santai' },
+    { name: 'Barrel Chair', price: 'Rp 400.000', image: 'Barrel Chair.jpeg', alt:'Kursi Santai' },
+    { name: 'White Wool Fluffy', price: 'Rp 500.000', image: 'White Wool Fluffy.jpeg', alt:'Kursi Santai' },
+
+
+    { name: 'Meja Kerja Minimalis', price: 'Rp 1.800.000', image: 'mejakerja.jpg',alt:'Meja kerja' },
+    { name: 'Meja Kerja Vintage', price: 'Rp 2.400.000', image: 'mejakerja2.jpg', alt:'Meja kerja' },
+    { name: 'Minimalist Black Desk', price: 'Rp 1.700.000', image: 'mejakerja3.jpg', alt:'Meja kerja' },
+    { name: 'Meja Kantor Minimalis', price: 'Rp 3.800.000', image: 'mejakerja4.jpg', alt:'Meja kerja' },
+    { name: 'Meja Kerja Rak Minimalis', price: 'Rp 4.200.000', image: 'mejakerja5.jpg', alt:'Meja kerja' },
+    { name: 'Meja Kerja Vintage Brown', price: 'Rp 1.800.000', image: 'mejakerja6.jpg', alt:'Meja kerja' },
+    { name: 'Modern White Desk', price: 'Rp 12.250.000', image: 'mejakerja7.jpg', alt:'Meja kerja' },
+    { name: 'Modern Drawer Desk', price: 'Rp 10.000.000', image: 'mejakerja8.jpg' , alt:'Meja kerja'},
+    { name: 'Meja Kerja Kayu Minimalis', price: 'Rp 4.900.000', image: 'mejakerja9.jpg', alt:'Meja kerja' },
+    { name: 'Meja Kerja Aesthetic', price: 'Rp4.500.000', image: 'mejakerja10.jpg', alt:'Meja kerja' },
+    { name: 'Vintage Drawer Desk', price: 'Rp3.600.000', image: 'mejakerja11.jpg', alt:'Meja kerja' },
+    { name: 'Elegant White Desk', price: 'Rp4.500.000', image: 'mejakerja12.jpg', alt:'Meja kerja' },
+    { name: 'Wooden Study Table', price: 'Rp4.500.000', image: 'mejakerja13.jpg', alt:'Meja kerja' },
+    { name: 'Modern Oak Wood Study Desk', price: 'Rp4.800.000', image: 'mejakerja14.jpg', alt:'Meja kerja' },
+    { name: 'Luciana Study Desk', price: 'Rp3.500.000', image: 'mejakerja15.jpg', alt:'Meja kerja' },
+    { name: 'Karbly Desk', price: 'Rp4.700.000', image: 'mejakerja16.jpg', alt:'Meja kerja' },
+   
+    
+
+
+    
+
+
+];
+
+
+function getQueryParameter(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+
+function displaySearchResults() {
+    const query = getQueryParameter('query').toLowerCase(); 
+    document.getElementById('search-query').innerText = query;
+
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = ''; 
+
+    
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(query) || 
+        (product.alt && product.alt.toLowerCase().includes(query))
+    );
+
+    if (filteredProducts.length > 0) {
+        filteredProducts.forEach(product => {
+            const productItem = document.createElement('div');
+            productItem.classList.add('product-item');
+
+            productItem.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+            `;
+
+            productList.appendChild(productItem);
+        });
+    } else {
+        productList.innerHTML = '<p>Produk tidak ditemukan.</p>';
+    }
+}
+
+
+window.onload = displaySearchResults;
+</script>
+
+    <footer>
+        <p>&copy; 2024 LanoVa Living</p>
+    </footer>
+</body>
+</html>
+
+
+

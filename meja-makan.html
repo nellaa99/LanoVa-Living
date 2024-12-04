@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meja Makan - Toko Furniture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .product-list {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgb(227, 223, 223);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produk Meja Makan</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <!-- Produk Sofa Modern -->
+            <div class="product-card">
+                <img src="mejamakan1.jpg" alt="Meja Makan">
+                <h3>Meja Makan Kayu</h3>
+                <p>Rp 2.800.000</p>
+                <button onclick="addToCart('Meja Makan')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="SCANDAVIAN.jpg" alt="Meja Makan">
+                <h3>Dining Room Scandinavian</h3>
+                <p>Rp 10.800.000</p>
+                <button onclick="addToCart('SCANDAVIAN')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="japan.jpg" alt="Modern Japanase Dining Table">
+                <h3>Modern Japanase Dining Table</h3>
+                <p>Rp 10.900.000</p>
+                <button onclick="addToCart('Modern Japanase Dining Table')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="orbis.jpg" alt="Orbis Dining Set">
+                <h3>Orbis Dining Set</h3>
+                <p>Rp 11.000.000</p>
+                <button onclick="addToCart('Orbis Dining Set')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="katarina.jpg" alt="Orbis Dining Set">
+                <h3>Katrina Dining Set</h3>
+                <p>Rp 11.000.000</p>
+                <button onclick="addToCart('Katrina Dining Set')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="glamorous.jpg" alt="Glamorous Dining Table">
+                <h3>Glamorous Dining Table</h3>
+                <p>Rp 8.000.000</p>
+                <button onclick="addToCart('Glamorous Dining Table')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="elegance.jpg" alt="Elegance Dining Table">
+                <h3>Elegance Dining Table</h3>
+                <p>Rp 7.500.000</p>
+                <button onclick="addToCart('Elegance Dining Table')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="marble.jpg" alt="Dining Table Marble Set">
+                <h3>Dining Table Marble Set</h3>
+                <p>Rp 15.500.000</p>
+                <button onclick="addToCart('Dining Table Marble Set')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="sphi.jpg" alt="Sophisticated Dining Table">
+                <h3>Sophisticated Dining Table</h3>
+                <p>Rp 20.500.000</p>
+                <button onclick="addToCart('Sophisticated Dining Table')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="marmer.jpg" alt="Marmer Dining Table">
+                <h3>Marmer Dining Table</h3>
+                <p>Rp 25.800.000</p>
+                <button onclick="addToCart('Marmer Dining Table')">Beli Sekarang</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Toko Furniture Impian. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang.");
+        }
+    </script>
+</body>
+</html>

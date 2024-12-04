@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempat Tidur - Toko Furniture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: bisque;
+            padding: 10px 0;
+            text-align: center;
+        }
+h3{
+    color:rgb(0, 0, 0);
+}
+        .product-list {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgb(227, 223, 223);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produk Tempat Tidur</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <div class="product-card">
+                <img src="tempattidur.jpg" alt="Tempat Tidur King Size">
+                <h3>Tempat Tidur King Size</h3>
+                <p>Rp 14.500.000</p>
+                <button onclick="addToCart('Tempat Tidur King Size')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="woodenkingsize.jpg" alt="Wooden King Size Bed">
+                <h3>Wooden King Size Bed</h3>
+                <p>Rp 25.500.000</p>
+                <button onclick="addToCart('Wooden King Size Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Madison Bookcase Storage Bed (Queen).jpg" alt="Madison Bookcase Storage Queen Size Bed">
+                <h3>Madison Bookcase Storage Queen Size Bed</h3>
+                <p>Rp 17.500.000</p>
+                <button onclick="addToCart('Madison Bookcase Storage Queen Size Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="singlebed.jpg" alt="Bookshelf Single Bed">
+                <h3>Bookshelf Single Bed</h3>
+                <p>Rp 10.350.000</p>
+                <button onclick="addToCart('Bookshelf Single Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Neat Single Bed.jpg" alt="Neat Single Bed">
+                <h3>Neat Single Bed</h3>
+                <p>Rp 9.220.000</p>
+                <button onclick="addToCart('Neat Single Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Sheesham Wood Euro Single Size Bed.jpg" alt="Sheesham Wood Euro Single Bed">
+                <h3>Sheesham Wood Euro Single Bed</h3>
+                <p>Rp 10.375.800</p>
+                <button onclick="addToCart('Sheesham Wood Euro Single Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Luxury King Size Bed.jpg" alt="Luxury King Size Bed">
+                <h3>Luxury King Size Bed</h3>
+                <p>Rp 28.700.000</p>
+                <button onclick="addToCart('Luxury King Size Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Rose Upholstered Bed.jpg" alt="Rose Upholstered Queen Bed">
+                <h3>Rose Upholstered Queen Bed</h3>
+                <p>Rp 17.560.000</p>
+                <button onclick="addToCart('Rose Upholstered Queen Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="GrayQueenBed.png" alt="Gray Queen Bed">
+                <h3>Gray Queen Bed</h3>
+                <p>Rp 2.700.000</p>
+                <button onclick="addToCart('Gray Queen Bed')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="Wooden Drawer Storage Bed Frame Japan Size.jpg" alt="Wooden Drawer Storage Bed Frame Japan Size">
+                <h3>Wooden Drawer Storage Bed Frame Japan Size</h3>
+                <p>Rp 8.700.000</p>
+                <button onclick="addToCart('Wooden Drawer Storage Bed Frame Japan Size')">Beli Sekarang</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="tempattidur6.jpg" alt="vintagecoffetable">
+            <h3>Grey King size</h3>
+            <p>Rp 2.000.000</p>
+            <button onclick="addToCart('Grey king size')">Beli Sekarang</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="tempattidur1.jpg" alt="Grey King size">
+        <h3>Vintage Coffe Table</h3>
+        <p>Rp 2.000.000</p>
+        <button onclick="addToCart('Vintage Coffe Table')">Beli Sekarang</button>
+    </div>
+</div>
+<div class="product-card">
+    <img src="tempattidur2.jpg" alt="Vintage Coffe Table">
+    <h3>Vintage Coffe Table</h3>
+    <p>Rp 2.000.000</p>
+    <button onclick="addToCart('Vintage Coffe Table')">Beli Sekarang</button>
+</div>
+</div>
+<div class="product-card">
+    <img src="tempattidur3.jpg" alt="Vintage Coffe Table">
+    <h3>Vintage Coffe Table</h3>
+    <p>Rp 2.000.000</p>
+    <button onclick="addToCart('Vintage Coffe Table')">Beli Sekarang</button>
+</div>
+</div>
+<div class="product-card">
+    <img src="tempattidur4.jpg" alt="Vintage Coffe Table">
+    <h3>Vintage Coffe Table</h3>
+    <p>Rp 2.000.000</p>
+    <button onclick="addToCart('Vintage Coffe Table')">Beli Sekarang</button>
+</div>
+</div>
+<div class="product-card">
+    <img src="tempattidur5.jpg" alt="Vintage Coffe Table">
+    <h3>Vintage Coffe Table</h3>
+    <p>Rp 2.000.000</p>
+    <button onclick="addToCart('Vintage Coffe Table')">Beli Sekarang</button>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LanoVa Living. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang.");
+        }
+    </script>
+</body>
+</html>

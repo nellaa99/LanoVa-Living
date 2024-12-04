@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meja Kerja - Toko Furniture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: bisque;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .product-list {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgb(227, 223, 223);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produk Meja Kerja</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <div class="product-card">
+                <img src="mejakerja.jpg" alt="Meja Kerja Minimalis">
+                <h4>Meja Kerja Minimalis</h4>
+                <p>Rp 1.800.000</p>
+                <button onclick="addToCart('Meja Kerja Minimalis')">Beli Sekarang</button>
+            </div>
+                <div class="product-card">
+                    <img src="mejakerja2.jpg" alt="Meja Kerja Vintage">
+                    <h4>Meja Kerja Vintage</h4>
+                    <p>Rp 2.400.000</p>
+                    <button onclick="addToCart('Meja Kerja Vintage')">Beli Sekarang</button>
+                </div>
+        
+            <div class="product-card">
+                        <img src="mejakerja3.jpg" alt="Minimalist Black Desk">
+                        <h4>Minimalist Black Desk</h4>
+                        <p>Rp 1.700.000</p>
+                        <button onclick="addToCart('Minimalist Black Desk')">Beli Sekarang</button>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="mejakerja4.jpg" alt="Meja Kantor Minimalis">
+                        <h4>Meja Kantor Minimalis</h4>
+                        <p>Rp 3.800.000</p>
+                        <button onclick="addToCart('Meja Kantor Minimalis')">Beli Sekarang</button>
+                    </div>
+                        
+                    <div class="product-card">
+                        <img src="mejakerja5.jpg" alt="Meja Kerja Rak Minimalis">
+                        <h4>Meja Kerja Rak Minimalis</h4>
+                        <p>Rp 4.200.000</p>
+                        <button onclick="addToCart('Meja Kerja Rak Minimalis')">Beli Sekarang</button>
+                    </div>
+                            
+                    <div class="product-card">
+                        <img src="mejakerja6.jpg" alt="Meja Kerja Vintage Brown">
+                        <h4>Meja Kerja Vintage Brown</h4>
+                        <p>Rp 1.800.000</p>
+                        <button onclick="addToCart('Meja Kerja Vintage Brown')">Beli Sekarang</button>
+                    </div>
+                               
+                    <div class="product-card">
+                        <img src="mejakerja7.jpg" alt="Modern White Desk">
+                        <h4>Modern White Desk</h4>
+                        <p>Rp 12.250.000</p>
+                        <button onclick="addToCart('Modern White Desk')">Beli Sekarang</button>
+                    </div>
+                                    
+                    <div class="product-card">
+                        <img src="mejakerja8.jpg" alt="Modern Drawer Desk">
+                        <h4>Modern Drawer Desk</h4>
+                        <p>Rp 10.000.000</p>
+                        <button onclick="addToCart('Modern Drawer Desk')">Beli Sekarang</button>
+                    </div>
+                                       
+                    <div class="product-card">
+                        <img src="mejakerja9.jpg" alt="Meja Kerja Kayu Minimalis">
+                        <h4>Meja Kerja Kayu Minimalis</h4>
+                        <p>Rp 4.900.000</p>
+                        <button onclick="addToCart('Meja Kerja Kayu Minimalis')">Beli Sekarang</button>
+                    </div>
+                                           
+                    <div class="product-card">
+                        <img src="mejakerja10.jpg" alt="Meja Kerja Aesthetic">
+                        <h4>Meja Kerja Aesthetic</h4>
+                        <p>Rp 4.500.000</p>
+                        <button onclick="addToCart('Meja Kerja Aesthetic')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja11.jpg" alt="Vintage Drawer Desk">
+                        <h4>Vintage Drawer Desk</h4>
+                        <p>Rp 3.600.000</p>
+                        <button onclick="addToCart('Vintage Drawer Desk')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja12.jpg" alt="Elegant White Desk">
+                        <h4>Elegant White Desk</h4>
+                        <p>Rp 4.500.000</p>
+                        <button onclick="addToCart('Elegant White Desk')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja13.jpg" alt="Meja Kerja Minimalis">
+                        <h4>Wooden Study Table</h4>
+                        <p>Rp 3.100.000</p>
+                        <button onclick="addToCart('Meja Kerja Minimalis')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja14.jpg" alt="Modern Oak Wood Study Desk">
+                        <h4>Modern Oak Wood Study Desk</h4>
+                        <p>Rp 4.800.000</p>
+                        <button onclick="addToCart('Modern Oak Wood Study Desk')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja15.jpg" alt="Luciana Study Desk">
+                        <h4>Luciana Study Desk</h4>
+                        <p>Rp 3.500.000</p>
+                        <button onclick="addToCart('Luciana Study Desk')">Beli Sekarang</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="mejakerja16.jpg" alt="Karlby Desk">
+                        <h4>Karlby Desk</h4 >
+                        <p>Rp 4.700.000</p>
+                        <button onclick="addToCart('Karlby Desk')">Beli Sekarang</button>
+                    </div>
+                                                
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Toko Furniture Impian. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang.");
+        }
+    </script>
+</body>
+</html>

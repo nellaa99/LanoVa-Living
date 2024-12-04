@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Keranjang Belanja</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .item-name {
+        flex: 1;
+    }
+
+    .item-price {
+        margin-right: 10px;
+    }
+
+    .item-quantity {
+        width: 60px;
+        margin-right: 10px;
+    }
+
+    .remove-item {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .remove-item:hover {
+        background-color: #c82333;
+    }
+
+    .item-total {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+    .total {
+        text-align: right;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    #checkout-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    #checkout-button:hover {
+        background-color: #218838;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Keranjang Belanja</h1>
+        <div id="cart">
+            <div class="cart-item">
+                <span class="item-name">Meja kerja</span>
+                <span class="item-price">Rp 1.800.000</span>
+                <input type="number" class="item-quantity" value="1" min="1">
+                <span class="item-total">Rp 1.800.000</span>
+                <button class="remove-item">Hapus</button>
+            </div>
+            <div class="cart-item">
+                <span class="item-name">Produk 2</span>
+                <span class="item-price">Rp 200.000</span>
+                <input type="number" class="item-quantity" value="1" min="1">
+                <span class="item-total">Rp 200.000</span>
+                <button class="remove-item">Hapus</button>
+            </div>
+        </div>
+        <div class="total">
+            <span>Total: </span>
+            <span id="total-price">Rp 2.000.000</span>
+        </div>
+        <button id="checkout-button">Selesaikan Pembelian</button>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    const totalPriceElement = document.getElementById('total-price');
+    const checkoutButton = document.getElementById('checkout-button');
+
+    function updateTotal() {
+        let total = 0;
+        cartItems.forEach(item => {
+            const price = parseInt(item.querySelector('.item-price').innerText.replace('Rp ', '').replace('.', ''));
+            const quantity = parseInt(item.querySelector('.item-quantity').value);
+            const itemTotal = price * quantity;
+            item.querySelector('.item-total').innerText = 'Rp ' + itemTotal.toLocaleString();
+            total += itemTotal;
+        });
+        totalPriceElement.innerText = 'Rp ' + total.toLocaleString();
+    }
+
+    cartItems.forEach(item => {
+        const quantityInput = item.querySelector('.item-quantity');
+        const removeButton = item.querySelector('.remove-item');
+
+        quantityInput.addEventListener('input', updateTotal);
+        removeButton.addEventListener('click', function() {
+            item.remove();
+            updateTotal();
+        });
+    });
+
+    
+    updateTotal();
+
+    
+    checkoutButton.addEventListener('click', function() {
+        window.location.href = 'checkout.html'; 
+    });
+});

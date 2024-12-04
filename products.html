@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Furniture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1 {
+    font-family: 'Abril Fatface', cursive;
+    color:bisque;
+}
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h2{
+    text-align: center;
+    
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    
+    .hamburger {
+        display: block;
+    }
+    
+    
+    nav.active ul {
+        display: flex;
+    }
+}
+
+.banner {
+    background: #ebdbdb;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 1; 
+    margin: 0 20px;
+}
+
+.search-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; 
+}
+
+.search-btn {
+    padding: 5px 10px;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+
+    
+}
+
+.search-btn:hover {
+    background-color: #555;
+}
+
+
+.products {
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: rgb(227, 223, 223);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.furniture-types {
+    padding: 20px;
+    background: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+.furniture-types {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.furniture-types h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:#333;
+}
+
+
+.furniture-types ul {
+    list-style-type:  none;
+}
+
+
+.furniture-types li {
+    margin: 10px 0;
+}
+
+.furniture-types a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.furniture-types a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.furniture-types li {
+    transition: transform 0.2s;
+}
+nav ul li a:hover {
+color: #32cdd5;
+}
+
+.furniture-types li:hover {
+    transform: translateY(-3px);
+}
+
+@media(max-width: 600px) {
+    .furniture-types {
+        padding: 15px;
+    }
+    
+    .furniture-types h2 {
+        font-size: 20px;
+    }
+    
+    .furniture-types a {
+        font-size: 16px;
+    }
+}
+
+
+</style>
+<body>
+    <header>
+        <h1>LanoVa Living</h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="cart.html">Keranjang</a></li>
+            </ul>
+        </nav>
+
+        <form action="search-result.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Cari produk..." class="search-input">
+            <button type="submit" class="search-btn">Cari</button>
+        </form>
+
+    </header>
+
+    <main>
+        <section class="banner">
+            <h2>Temukan Furniture Impian Anda!</h2>
+        </section>
+
+        <section class="products">
+            <h2>Produk Terbaru Kami</h2>
+            <div class="product-list">
+                
+                <div class="product-card">
+                    <img src="sofa.jpg" alt="Sofa Modern">
+                    <h3>Sofa Modern</h3>
+                    <p>Rp 3.500.000</p>
+                    <button onclick="addToCart('Sofa Modern')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="mejamakan1.jpg" alt="Meja Makan Kayu">
+                    <h3>Meja Makan Kayu</h3>
+                    <p>Rp 2.800.000</p>
+                    <button onclick="addToCart('Meja Makan Kayu')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="kursisantai.jpg" alt="Kursi Santai">
+                    <h3>Kursi Santai</h3>
+                    <p>Rp 1.200.000</p>
+                    <button onclick="addToCart('Kursi Santai')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="lemaripakaian.jpg" alt="Lemari Pakaian">
+                    <h3>Lemari Pakaian</h3>
+                    <p>Rp 4.000.000</p>
+                    <button onclick="addToCart('Lemari Pakaian')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="mejakopi.jpg" alt="Meja Kopi">
+                    <h3>Meja Kopi</h3>
+                    <p>Rp 1.500.000</p>
+                    <button onclick="addToCart('Meja Kopi')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="rakbuku1.jpg" alt="Rak Buku">
+                    <h3>Rak Buku</h3>
+                    <p>Rp 900.000</p>
+                    <button onclick="addToCart('Rak Buku')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="tempattidur.jpg" alt="Tempat Tidur King Size">
+                    <h3>Tempat Tidur King Size</h3>
+                    <p>Rp 5.500.000</p>
+                    <button onclick="addToCart('Tempat Tidur King Size')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="mejakerja.jpg" alt="Meja Kerja Minimalis">
+                    <h3>Meja Kerja Minimalis</h3>
+                    <p>Rp 1.800.000</p>
+                    <button onclick="addToCart('Meja Kerja Minimalis')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="kursikantor.jpg" alt="Kursi Kantor Ergonomis">
+                    <h3>Kursi Kantor Ergonomis</h3>
+                    <p>Rp 1.000.000</p>
+                    <button onclick="addToCart('Kursi Kantor Ergonomis')">Beli Sekarang</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="lampuhias.jpg" alt="Lampu Hias">
+                    <h3>Lampu Hias</h3>
+                    <p>Rp 600.000</p>
+                    <button onclick="addToCart('Lampu Hias')">Beli Sekarang</button>
+                </div>
+                <div class="product-card">
+                    <img src="moderngray.jpeg" alt="Modern Gray Couch Hias">
+                    <h3>Modern Gray Couch</h3>
+                    <p>Rp 4.800.000</p>
+                    <button onclick="addToCart('Modern Gray Couch')">Beli Sekarang</button>
+                </div>
+                <div class="product-card">
+                    <img src="giantsofa.jpeg" alt="Giant Sofa">
+                    <h3>Giant sofa</h3>
+                    <p>Rp 7.350.000</p>
+                    <button onclick="addToCart('Giant Sofa')">Beli Sekarang</button>
+                </div>
+                <div class="product-card">
+                    <img src="tulipsofa.jpeg" alt="Tulip Sofa">
+                    <h3>Tulip sofa</h3>
+                    <p>Rp 2.300.000</p>
+                    <button onclick="addToCart('Giant Sofa')">Beli Sekarang</button>
+                </div>
+                <div class="product-card">
+                    <img src="vintagecoffetable.jpeg" alt="Vintage Coffe Table">
+                    <h3>Vintage Coffe Table</h3>
+                    <p>Rp 2.000.000</p>
+                    <button onclick="addToCart('Giant Sofa')">Beli Sekarang</button>
+                </div>
+                <div class="product-card">
+                    <img src="mejakerja12.jpg" alt="Meja kerja">
+                    <h3>Vintage Coffe Table</h3>
+                    <p>Rp 1.000.000</p>
+                    <button onclick="addToCart('Giant Sofa')">Beli Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="furniture-types">
+            <h2>Jenis Furniture Kami</h2>
+            <ul>
+                <li><a href="sofa.html">Sofa</a></li>
+                <li><a href="meja-makan.html">Meja Makan</a></li>
+                <li><a href="kursi.html">Kursi</a></li>
+                <li><a href="lemari.html">Lemari</a></li>
+                <li><a href="meja-kopi.html">Meja Kopi</a></li>
+                <li><a href="rak-buku.html">Rak Buku</a></li>
+                <li><a href="tempat-tidur.html">Tempat Tidur</a></li>
+                <li><a href="meja-kerja.html">Meja Kerja</a></li>
+                <li><a href="kursi-kantor.html">Kursi Kantor</a></li>
+                <li><a href="lampu-hias.html">Lampu Hias</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LanoVa Living. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+    
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang.");
+        }
+        console.log("mari berbelanja")
+    </script>
+
+    
+</body>
+</html>

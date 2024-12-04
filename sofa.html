@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofa - lanoVa Living</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: bisque;
+            padding: 10px 0;
+            text-align: center;
+            font-family:Arial, sans-serif;
+            color:bisque;
+        }
+
+        .product-list {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgb(227, 223, 223);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Produk Sofa</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <div class="product-card">
+                <img src="sofa.jpg" alt="Sofa Modern">
+                <h3>Sofa Modern</h3>
+                <p>Rp 6.500.000</p>
+                <button onclick="addToCart('Sofa Modern')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="moderngray.jpeg" alt="Modern Gray Sofa">
+                <h3>Modern Gray Sofa</h3>
+                <p>Rp 8.800.000</p>
+                <button onclick="addToCart('Modern Gray Sofa')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="giantsofa.jpeg" alt="Giant Sofa">
+                <h3>Giant Sofa</h3>
+                <p>Rp 7.350.000</p>
+                <button onclick="addToCart('Giant Sofa')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="tulipsofa.jpeg" alt="Tulip Sofa">
+                <h3>Tulip Sofa</h3>
+                <p>Rp 9.300.000</p>
+                <button onclick="addToCart('Tulip Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa1.jpg" alt="Rumsey Linen Sofa">
+                <h3>Rumsey Linen Sofa</h3>
+                <p>Rp 10.200.000</p>
+                <button onclick="addToCart('Rumsey Linen Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="VOIS.jpg" alt="Vois Modulaar Sofa">
+                <h3>Vois Modulaar Sofa</h3>
+                <p>Rp 10.300.000</p>
+                <button onclick="addToCart('Vois Modulaar Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa3.jpg" alt="Matera Sofa">
+                <h3>Matera Sofa</h3>
+                <p>Rp 12.300.000</p>
+                <button onclick="addToCart('Matera Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa4.jpg" alt="Sofa Retro">
+                <h3>Sofa Retro</h3>
+                <p>Rp 8.700.000</p>
+                <button onclick="addToCart('Sofa Retro')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa5.jpg" alt="Woodmist Sofa">
+                <h3>Woodmist Sofa</h3>
+                <p>Rp 9.600.000</p>
+                <button onclick="addToCart('Woodmist Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa9.jpg" alt="Minimalist Relaxing Lounge Sofa">
+                <h3>Minimalist Relaxing Lounge Sofa</h3>
+                <p>Rp 15.900.000</p>
+                <button onclick="addToCart('Minimalist Relaxing Lounge Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa0.jpg" alt="Tofu L-Shape Sofa">
+                <h3>Tofu L-Shape Sofa</h3>
+                <p>Rp 16.700.000</p>
+                <button onclick="addToCart('Tofu L-Shape Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa01.jpg" alt="Arianna Corner Sofa">
+                <h3>Arianna Corner Sofa</h3>
+                <p>Rp 17.300.000</p>
+                <button onclick="addToCart('Arianna Corner Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa12.jpg" alt="Robin Liu Marshmallow Sofa">
+                <h3>Robin Liu Marshmallow Sofa</h3>
+                <p>Rp 11.400.000</p>
+                <button onclick="addToCart('Robin Liu Marshmallow Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa98.jpg" alt="Linteloo Arp Sofa">
+                <h3>Linteloo Arp Sofa</h3>
+                <p>Rp 11.000.000</p>
+                <button onclick="addToCart('Linteloo Arp Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa45jpg.jpg" alt="Pastel Sofa">
+                <h3>Pastel Sofa</h3>
+                <p>Rp 13.100.000</p>
+                <button onclick="addToCart('Pastel Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="Cloud Sofa.jpeg" alt="Cloud Sofa">
+                <h3>Cloud Sofa</h3>
+                <p>Rp 7.700.000</p>
+                <button onclick="addToCart('Cloud Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa4.jpg" alt="Dipley Beige Sofa">
+                <h3>Dipley Beige Sofa</h3>
+                <p>Rp 6.900.000</p>
+                <button onclick="addToCart('Dipley Beige Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="sofa2.jpg" alt="Fabric Armrest Sofa">
+                <h3>Fabric Armrest Sofa</h3>
+                <p>Rp 7.800.000</p>
+                <button onclick="addToCart('Fabric Armrest Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="french.jpeg" alt="French Modern Sofa">
+                <h3>French Modern Sofa</h3>
+                <p>Rp 9.300.000</p>
+                <button onclick="addToCart('French Modern Sofa')">Beli Sekarang</button>
+            </div> 
+            <div class="product-card">
+                <img src="flowersofa.jpg" alt="Comfort Flower Sofa">
+                <h3>Comfort Flower Sofa</h3>
+                <p>Rp 6.600.000</p>
+                <button onclick="addToCart('Comfort Flower Sofa')">Beli Sekarang</button>
+            </div> 
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Toko Furniture Impian. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang.");
+        }
+    </script>
+</body>
+</html>

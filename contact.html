@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kontak Kami - LanoVa Living</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header {
+    background-color: #141618;
+    padding: 20px 0;
+    text-align: center;
+    color: bisque;
+}
+
+
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Abril Fatface', cursive;
+    margin: 10px 0;
+    color:bisque;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: #32cdd5;
+}
+
+
+.contact-info {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.contact-methods .contact-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.contact-methods .contact-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+
+.contact-methods .contact-item:nth-child(-n+2) {
+    order: 1; 
+}
+
+.contact-methods .contact-item:nth-child(n+3) {
+    order: 2; 
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+
+footer {
+    background-color: #0d0d0e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-methods {
+        grid-template-columns: 1fr; 
+    }
+
+    .contact-item {
+        max-width: 280px;
+    }
+}
+
+
+</style>
+<body>
+    <header>
+        
+        <h1>LanoVa Living</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="products.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="cart.html">Keranjang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan atau ingin mengetahui lebih lanjut tentang produk kami, Anda dapat menghubungi kami melalui:</p>
+            
+            <div class="contact-methods">
+                
+                <div class="contact-item">
+                    <h3>Ana</h3>
+                    <a href="https://wa.me/6282311293039" target="_blank" class="contact-link">
+                        <img src="whatsapp.jpg" alt="WhatsApp" class="contact-icon">
+                        <p>WhatsApp</p>
+                    </a>
+                </div>
+            
+                
+                <div class="contact-item">
+                    <h3>Nella</h3>
+                    <a href="https://wa.me/6282182174920" target="_blank" class="contact-link">
+                        <img src="whatsapp.jpg" alt="WhatsApp" class="contact-icon">
+                        <p>WhatsApp</p>
+                    </a>
+                </div>
+        
+                
+                <div class="contact-item">
+                    <h3>Ana</h3>
+                    <a href="https://www.instagram.com/trianamahavira_?igsh=MTV4Zjl1d3E5ZHB5cg==" target="_blank" class="contact-link">
+                        <img src="instagram.png" alt="Instagram" class="contact-icon">
+                        <p>Instagram</p>
+                    </a>
+                </div>
+            
+                
+                <div class="contact-item">
+                    <h3>Nella</h3>
+                    <a href="https://www.instagram.com/nellaaprvl?igsh=MXRzYWVna25ucGl2Yg==" target="_blank" class="contact-link">
+                        <img src="instagram.png" alt="Instagram" class="contact-icon">
+                        <p>Instagram</p>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LanoVa Living | Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="nella.js"></script>
+</body>
+</html>
